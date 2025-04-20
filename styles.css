@@ -1,0 +1,116 @@
+/* 基本重置 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    background-color: #F55;
+    color: white;
+    font-family: "Arial", sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 20px;
+  }
+  
+  header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+  }
+  
+  .menu-button,
+  .toggle-mode,
+  .language-switch,
+  .login-button {
+    width: 40px;
+    height: 40px;
+    border: 1px solid white;
+    background-color: transparent;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .login-button {
+    border-radius: 20px;
+    padding: 0 16px;
+    width: auto;
+  }
+  
+  .title {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    flex: 1;
+  }
+  
+  main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 40px;
+    gap: 20px;
+  }
+  
+  .selection-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+  
+  .input-group,
+  .search-button {
+    width: 280px;
+    height: 60px;
+    border: 1px solid white;
+    background-color: transparent;
+    color: white;
+    font-size: 16px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  
+  .search-button {
+    font-weight: bold;
+    transition: background-color 0.2s ease;
+  }
+  
+  .search-button:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+  
+  .station-options,
+  .destination-options,
+  .time-options {
+    display: none;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .station-options.visible,
+  .destination-options.visible,
+  .time-options.visible {
+    display: flex;
+  }
+  
+  button:hover {
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
+  }
+  

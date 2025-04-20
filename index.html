@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TagGo</title>
+    <link rel="stylesheet" href="styles.css">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+</head>
+
+<body>
+    <header>
+        <button class="menu-button">≡</button>
+        <div class="title">TagGo</div>
+        <div style="display: flex; gap: 10px;">
+          <button class="language-switch">🌐</button>
+          <button class="toggle-mode">☀️</button>
+          <button class="login-button">登入</button>
+        </div>
+      </header>
+    
+      <main>
+        <div class="selection-buttons">
+          <button class="input-group" onclick="toggleOptions('station')">出發地</button>
+          <button class="input-group" onclick="toggleOptions('destination')">目的地</button>
+          <button class="input-group" onclick="toggleOptions('time')">出發時間</button>
+        </div>
+      
+        <div class="station-options">
+            <button class="input-group">日本</button>
+            <button class="input-group">韓國</button>
+            <button class="input-group">美國</button>
+            <button class="input-group">泰國</button>
+            <button class="input-group">法國</button>
+        </div>
+        <div class="destination-options">
+            <button class="input-group">台灣</button>
+            <button class="input-group">中國</button>
+            <button class="input-group">新加坡</button>
+            <button class="input-group">英國</button>
+            <button class="input-group">澳洲</button>
+          </div>
+        
+          <div class="time-options">
+            <button class="input-group">上午</button>
+            <button class="input-group">中午</button>
+            <button class="input-group">下午</button>
+            <button class="input-group">晚上</button>
+          </div>
+        
+          <button class="search-button">搜尋</button>
+        </main>
+        <script>
+            function toggleOptions(type) {
+              document.querySelector('.station-options').classList.remove('visible');
+              document.querySelector('.destination-options').classList.remove('visible');
+              document.querySelector('.time-options').classList.remove('visible');
+          
+              if (type === 'station') {
+                document.querySelector('.station-options').classList.toggle('visible');
+              } else if (type === 'destination') {
+                document.querySelector('.destination-options').classList.toggle('visible');
+              } else if (type === 'time') {
+                document.querySelector('.time-options').classList.toggle('visible');
+              }
+            }
+          </script>
+    
+   
+</body>
+</html>
